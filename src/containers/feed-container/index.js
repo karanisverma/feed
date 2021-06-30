@@ -17,7 +17,6 @@ function FeedContainer(props) {
       >
         This is card children content!!
       </Card>
-      This is the feed FeedContainer
     </div>
   );
 }
