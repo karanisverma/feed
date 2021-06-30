@@ -1,7 +1,14 @@
 import React from "react";
 
 import { Like, Comment } from "../shared";
-import { StyledStats } from "./style";
+import {
+  StyledStats,
+  StyledCheckIcon,
+  StyledHeader,
+  StyledUserLabel,
+  StyledUserName,
+} from "./style";
+import checkIconImg from "../../assets/checkmark.svg";
 const Card = ({ avatarImg, user, stats, children }) => {
   const { walletAddress, name, isVerified, isVerifiedWallet } = user;
   const { like, comment, timestamp } = stats;
@@ -21,16 +28,24 @@ const Card = ({ avatarImg, user, stats, children }) => {
     <article>
       <img src={avatarImg}></img>
       <div>
-        <header>
-          <div>
-            <h4>{user.name}</h4>
-            <span>checkmark</span>
+        <StyledHeader>
+          <StyledUserLabel>
+            <StyledUserName>{user.name}</StyledUserName>
+            {/* TODO: how to handle space component changes?? */}
+            <span>
+              <StyledCheckIcon src={checkIconImg}></StyledCheckIcon>
+            </span>
             <span>{walletAddress}</span>
-            <span>isVerifiedWallet</span>
+            <span>
+              <StyledCheckIcon
+                src={checkIconImg}
+                isGrayScale={true}
+              ></StyledCheckIcon>
+            </span>
             <time>{timestamp}</time>
-          </div>
+          </StyledUserLabel>
           <div>...</div>
-        </header>
+        </StyledHeader>
         <div>{children}</div>
       </div>
       <StyledStats>

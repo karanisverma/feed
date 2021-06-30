@@ -6,9 +6,23 @@ export const StyledStats = styled.div`
   justify-content: space-between;
 `;
 
-export const StyledCountLabel = styled.span`
-  font-size: 14px;
-  line-height: 16.42px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.colors.secondaryText};
+export const StyledHeader = styled.header`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+export const StyledUserLabel = styled.header`
+  display: flex;
+`;
+
+export const StyledUserName = styled.h4`
+  margin: 0;
+  font-weight: 600;
+`;
+
+export const StyledCheckIcon = styled.img`
+  width: 10px;
+  filter: none;
+  ${({ isGrayScale }) => isGrayScale && `filter: grayscale(1)`}
 `;
