@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Like, Comment } from "../shared";
+import { StyledStats } from "./style";
 const Card = ({ avatarImg, user, stats, children }) => {
   const { walletAddress, name, isVerified, isVerifiedWallet } = user;
   const { like, comment, timestamp } = stats;
@@ -32,12 +33,10 @@ const Card = ({ avatarImg, user, stats, children }) => {
         </header>
         <div>{children}</div>
       </div>
-      <div>
-        {/* like */}
+      <StyledStats>
         <Like count={10} />
         <Comment count={10} />
-        {/* comment */}
-      </div>
+      </StyledStats>
     </article>
   );
 };

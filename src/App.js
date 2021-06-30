@@ -4,11 +4,7 @@ import "./App.css";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  border: 7px solid ${({ theme }) => theme.colors.sharedWindowPrimary};
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+  font-family: "Work Sans", sans-serif;
 `;
 
 import { FeedContainer } from "./containers";
