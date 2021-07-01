@@ -37,7 +37,10 @@ function Tabs(props) {
         children: (
           <StyledTabLabel active={key === activeKey}>
             {child.props.icon && (
-              <StyledIcon src={child.props.icon}></StyledIcon>
+              <StyledIcon
+                src={child.props.icon}
+                active={key === activeKey}
+              ></StyledIcon>
             )}
             {child.props.title}
           </StyledTabLabel>
