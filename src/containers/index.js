@@ -1,3 +1,4 @@
 import FeedContainer from "./feed-container";
 import AboutContainer from "./about-container";
-export { FeedContainer, AboutContainer };
+import CTAContainer from "./connect-wallet-container";
+export { FeedContainer, AboutContainer, CTAContainer };
