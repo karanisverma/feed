@@ -1,24 +1,19 @@
 export const getTimePassed = (timeStamp) => {
-  const currentTime = new Date();
-  const currentTimeStamp = currentTime.getTime();
+  const currentTimeStamp = Date.now();
   const timeDelta = currentTimeStamp - timeStamp;
   return msToTime(timeDelta, timeStamp);
 };
 
 function msToTime(duration, timeStamp) {
-  let minutes = Math.floor((duration / (1000 * 60)) % 60);
-  let hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
-  let days = hours / 24;
-
-  days = days < 10 ? "0" + days : days;
-  hours = hours < 10 ? "0" + hours : hours;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-
+  let minutes = Math.floor(duration / 1000 / 60);
+  let hours = Math.floor(minutes / 60);
+  let days = Math.floor(hours / 24);
+  if (days === 1) return `Yesterday at ${formatAMPM(new Date(timeStamp))}`;
   if (days > 2)
     return `${formatDate(new Date(timeStamp))} at ${formatAMPM(
       new Date(timeStamp)
     )}`;
-  if (days === 1) return `Yesterday at ${formatAMPM(new Date(timeStamp))}`;
+
   if (hours) return `${hours}h ${minutes}m`;
   if (minutes) return `${minutes}m`;
   return "now";
