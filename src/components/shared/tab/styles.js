@@ -18,6 +18,10 @@ export const StyledTabs = styled.div`
 `;
 export const StyledIcon = styled.img`
   margin-right: 10px;
+  ${({ active }) =>
+    active &&
+    `filter: brightness(0.1);
+`}
 `;
 export const StyledTabLabel = styled.div`
   width: 128px;
