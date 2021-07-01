@@ -13,5 +13,6 @@ export const StyledButton = styled.button`
   border-radius: 4px;
   border-color: transparent;
   justify-content: space-between;
+  align-items: center;
   ${({ color }) => color && `background: ${color}`}
 `;
