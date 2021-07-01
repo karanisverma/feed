@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import { FeedContainer, AboutContainer } from "./containers";
+import { FeedContainer, AboutContainer, CTAContainer } from "./containers";
 import { StyledContainer } from "./styles";
 
 function App() {
@@ -13,7 +13,9 @@ function App() {
       <main>
         <FeedContainer></FeedContainer>
       </main>
-      <aside>{/* <AboutContainer></AboutContainer> */}</aside>
+      <aside>
+        <CTAContainer></CTAContainer>
+      </aside>
     </StyledContainer>
   );
 }
