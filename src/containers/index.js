@@ -1,2 +1,3 @@
 import FeedContainer from "./feed-container";
-export { FeedContainer };
+import AboutContainer from "./about-container";
+export { FeedContainer, AboutContainer };

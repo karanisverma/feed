@@ -7,10 +7,15 @@ import {
   StyledHeader,
   StyledUserLabel,
   StyledUserName,
+  StyledSpan,
+  StyledSection,
+  StyledArticle,
 } from "./style";
 import checkIconImg from "../../assets/checkmark.svg";
+import { getTimePassed } from "../../utils/time";
+import { formatWalletAddress } from "../../utils/format";
 const Card = ({ avatarImg, user, stats, children }) => {
-  const { walletAddress, name, isVerified, isVerifiedWallet } = user;
+  const { walletAddress, name, isVerified, isVerifiedWallet, userName } = user;
   const { like, comment, timestamp } = stats;
   console.log(
     avatarImg,
@@ -25,34 +30,35 @@ const Card = ({ avatarImg, user, stats, children }) => {
     timestamp
   );
   return (
-    <article>
+    <StyledArticle>
       <img src={avatarImg}></img>
-      <div>
+      <StyledSection>
         <StyledHeader>
           <StyledUserLabel>
             <StyledUserName>{user.name}</StyledUserName>
             {/* TODO: how to handle space component changes?? */}
-            <span>
-              <StyledCheckIcon src={checkIconImg}></StyledCheckIcon>
-            </span>
-            <span>{walletAddress}</span>
+            <StyledCheckIcon src={checkIconImg}></StyledCheckIcon>
+            <StyledSpan>{userName}</StyledSpan>
+            <StyledSpan>{formatWalletAddress(walletAddress)}</StyledSpan>
             <span>
               <StyledCheckIcon
                 src={checkIconImg}
                 isGrayScale={true}
               ></StyledCheckIcon>
             </span>
-            <time>{timestamp}</time>
+            <StyledSpan>
+              <time>{getTimePassed(timestamp)}</time>
+            </StyledSpan>
           </StyledUserLabel>
           <div>...</div>
         </StyledHeader>
         <div>{children}</div>
-      </div>
-      <StyledStats>
-        <Like count={10} />
-        <Comment count={10} />
-      </StyledStats>
-    </article>
+        <StyledStats>
+          <Like count={10} />
+          <Comment count={10} />
+        </StyledStats>
+      </StyledSection>
+    </StyledArticle>
   );
 };
 
