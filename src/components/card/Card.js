@@ -13,6 +13,7 @@ import {
   StyledAvatar,
   StyledStatus,
   StyledMenuIcon,
+  StyledWalletAddress,
 } from "./style";
 import checkIconImg from "../../assets/checkmark.svg";
 import { getTimePassed } from "../../utils/time";
@@ -20,34 +21,33 @@ import { formatWalletAddress } from "../../utils/format";
 const Card = ({ avatarImg, user, stats, children }) => {
   const { walletAddress, name, isVerified, isVerifiedWallet, userName } = user;
   const { like, comment, timestamp } = stats;
-  console.log(
-    avatarImg,
-    user,
-    stats,
-    walletAddress,
-    name,
-    isVerified,
-    isVerifiedWallet,
-    like,
-    comment,
-    timestamp
-  );
+
   return (
     <StyledArticle>
       <StyledAvatar src={avatarImg}></StyledAvatar>
       <StyledSection>
         <StyledHeader>
           <StyledUserLabel>
-            <StyledUserName>{user.name}</StyledUserName>
-            {/* TODO: how to handle space component changes?? */}
-            <StyledCheckIcon src={checkIconImg}></StyledCheckIcon>
-            <StyledSpan>{userName}</StyledSpan>
-            <StyledSpan>{formatWalletAddress(walletAddress)}</StyledSpan>
-            <span>
+            {user.name && <StyledUserName>{name}</StyledUserName>}
+            {isVerified && (
               <StyledCheckIcon
                 src={checkIconImg}
-                isGrayScale={true}
+                isGrayScale={!isVerified}
               ></StyledCheckIcon>
+            )}
+            {userName && <StyledSpan>{userName}</StyledSpan>}
+            {walletAddress && (
+              <StyledWalletAddress>
+                {formatWalletAddress(walletAddress)}
+              </StyledWalletAddress>
+            )}
+            <span>
+              {isVerifiedWallet != null && (
+                <StyledCheckIcon
+                  src={checkIconImg}
+                  isGrayScale={!isVerifiedWallet}
+                ></StyledCheckIcon>
+              )}
             </span>
             <StyledSpan>
               <time>{getTimePassed(timestamp)}</time>
@@ -57,8 +57,8 @@ const Card = ({ avatarImg, user, stats, children }) => {
         </StyledHeader>
         <StyledStatus>{children}</StyledStatus>
         <StyledStats>
-          <Like count={10} />
-          <Comment count={10} />
+          <Like count={like} />
+          <Comment count={comment} />
         </StyledStats>
       </StyledSection>
     </StyledArticle>

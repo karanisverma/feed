@@ -50,9 +50,7 @@ export const StyledTabBar = styled.div`
   z-index: 3;
 `;
 
-export const StyledTabContent = styled.div`
-  /* color: red; */
-`;
+export const StyledTabContent = styled.div``;
 
 export const StyledSearchWrapper = styled.div`
   position: absolute;

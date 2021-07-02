@@ -54,17 +54,24 @@ export const StyledUserLabel = styled.header`
 export const StyledUserName = styled.h4`
   margin: 0;
   font-weight: 600;
+  margin-right: 6px;
 `;
 
 export const StyledSpan = styled.span`
   display: inline-block;
-  margin-left: 12px;
+  margin-right: 12px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.colors.secondaryText};
+`;
+export const StyledWalletAddress = styled.span`
+  display: inline-block;
+  margin-right: 6px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.secondaryText};
 `;
 export const StyledCheckIcon = styled.img`
   width: 10px;
-  margin-left: 6px;
+  margin-right: 12px;
   filter: none;
   ${({ isGrayScale }) => isGrayScale && `filter: grayscale(1)`}
 `;
