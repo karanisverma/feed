@@ -6,6 +6,8 @@ import {
   StyledTabBar,
   StyledTabLabel,
   StyledIcon,
+  StyledSearch,
+  StyledSearchWrapper,
 } from "./styles";
 function Tab({ children, ...props }) {
   const onClick = (e) => {
@@ -20,10 +22,17 @@ function Tab({ children, ...props }) {
 
   return <StyledTab onClick={onClick}>{children}</StyledTab>;
 }
+function Search() {
+  return (
+    <StyledSearchWrapper>
+      <StyledSearch placeholder="SEARCH..."></StyledSearch>
+    </StyledSearchWrapper>
+  );
+}
 function Tabs(props) {
   const getTabs = () => {
     const { activeKey, disabled, orientation, children, onChange } = props;
-    const tabs = React.Children.map(children, (child, index) => {
+    let tabs = React.Children.map(children, (child, index) => {
       if (!child) return;
 
       const key = child.key || String(index);
@@ -47,7 +56,7 @@ function Tabs(props) {
         ),
       });
     });
-
+    tabs = [...tabs, Search()];
     return tabs;
   };
 

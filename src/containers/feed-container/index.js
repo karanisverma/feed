@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "../../components";
 import { Tab, Tabs } from "../../components/shared";
-import { StyledContainer, StyledSearch, StyledSearchWrapper } from "./style";
+import { StyledContainer } from "./style";
 import homeIconImg from "../../assets/icon-home.svg";
 import messageIconImg from "../../assets/icon-message.svg";
 import communitiesIconImg from "../../assets/icon-communities.svg";
@@ -12,9 +12,6 @@ function FeedContainer(props) {
 
   return (
     <StyledContainer>
-      <StyledSearchWrapper>
-        <StyledSearch placeholder="SEARCH..."></StyledSearch>
-      </StyledSearchWrapper>
       <Tabs
         onChange={({ activeKey }) => {
           console.log("onChange is called for tabs-->", activeKey);
