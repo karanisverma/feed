@@ -60,21 +60,30 @@ export const StyledSearchWrapper = styled.div`
   right: 0;
   display: flex;
   align-items: center;
+  &:focus-within {
+    &:after {
+      opacity: 1;
+    }
+  }
   &:before {
     content: url(${SearchIcon});
     position: absolute;
     left: 21px;
     z-index: 3;
+    user-select: none;
   }
   &:after {
     content: "×";
     position: absolute;
-    right: 21px;
+    right: 9px;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 400;
     z-index: 3;
     color: #687684;
     cursor: pointer;
+    padding: 12px;
+    opacity: 0;
+    transition: opacity 500ms;
   }
 `;
 export const StyledSearch = styled.input`
@@ -90,7 +99,7 @@ export const StyledSearch = styled.input`
   font-size: 14px;
   outline: none;
   line-height: 16px;
-  transition: width 300ms;
+  transition: width 500ms;
   &:focus {
     width: 720px;
     margin: 0;
