@@ -10,6 +10,9 @@ import {
   StyledSpan,
   StyledSection,
   StyledArticle,
+  StyledAvatar,
+  StyledStatus,
+  StyledMenuIcon,
 } from "./style";
 import checkIconImg from "../../assets/checkmark.svg";
 import { getTimePassed } from "../../utils/time";
@@ -31,7 +34,7 @@ const Card = ({ avatarImg, user, stats, children }) => {
   );
   return (
     <StyledArticle>
-      <img src={avatarImg}></img>
+      <StyledAvatar src={avatarImg}></StyledAvatar>
       <StyledSection>
         <StyledHeader>
           <StyledUserLabel>
@@ -50,9 +53,9 @@ const Card = ({ avatarImg, user, stats, children }) => {
               <time>{getTimePassed(timestamp)}</time>
             </StyledSpan>
           </StyledUserLabel>
-          <div>...</div>
+          <StyledMenuIcon>...</StyledMenuIcon>
         </StyledHeader>
-        <div>{children}</div>
+        <StyledStatus>{children}</StyledStatus>
         <StyledStats>
           <Like count={10} />
           <Comment count={10} />

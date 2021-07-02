@@ -31,7 +31,10 @@ function FeedContainer(props) {
             }}
             stats={{ comment: 3, like: 49, timestamp: 1625076103498 }}
           >
-            This is card children content!!
+            Tax rates seem likely to rise for the wealthiest and highest-earning
+            taxpayers under the Biden administration. For those with traditional
+            retirement accounts, making moves ahead of tax law changes can
+            reduce income-tax bills in retirement.
           </Card>
           <Card
             avatarImg={userImage}

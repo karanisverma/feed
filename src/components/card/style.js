@@ -5,6 +5,24 @@ export const StyledStats = styled.div`
   width: 120px;
   justify-content: space-between;
 `;
+export const StyledAvatar = styled.img`
+  height: fit-content;
+`;
+export const StyledMenuIcon = styled.div`
+  color: #c4ccd3;
+  font-size: 28px;
+  position: relative;
+  top: -5px;
+`;
+export const StyledStatus = styled.div`
+  width: 573px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+`;
 
 export const StyledArticle = styled.article`
   display: flex;
