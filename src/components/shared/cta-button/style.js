@@ -14,5 +14,9 @@ export const StyledButton = styled.button`
   border-color: transparent;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.75;
+  }
   ${({ color }) => color && `background: ${color}`}
 `;

@@ -9,12 +9,13 @@ function msToTime(duration, timeStamp) {
   let hours = Math.floor(minutes / 60);
   let days = Math.floor(hours / 24);
   if (days === 1) return `Yesterday at ${formatAMPM(new Date(timeStamp))}`;
-  if (days > 2)
+  if (days >= 2)
     return `${formatDate(new Date(timeStamp))} at ${formatAMPM(
       new Date(timeStamp)
     )}`;
-
-  if (hours) return `${hours}h ${minutes}m`;
+  minutes = minutes % 60;
+  if (hours) return `${hours}h`;
+  if (hours && minutes) return `${hours}h ${minutes}m`;
   if (minutes) return `${minutes}m`;
   return "now";
 }

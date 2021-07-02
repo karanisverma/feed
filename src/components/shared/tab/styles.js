@@ -50,9 +50,7 @@ export const StyledTabBar = styled.div`
   z-index: 3;
 `;
 
-export const StyledTabContent = styled.div`
-  /* color: red; */
-`;
+export const StyledTabContent = styled.div``;
 
 export const StyledSearchWrapper = styled.div`
   position: absolute;
@@ -63,6 +61,7 @@ export const StyledSearchWrapper = styled.div`
   &:focus-within {
     &:after {
       opacity: 1;
+      cursor: pointer;
     }
   }
   &:before {
@@ -80,7 +79,6 @@ export const StyledSearchWrapper = styled.div`
     font-weight: 400;
     z-index: 3;
     color: #687684;
-    cursor: pointer;
     padding: 12px;
     opacity: 0;
     transition: opacity 500ms;
