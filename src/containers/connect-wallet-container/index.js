@@ -1,4 +1,5 @@
 import React from "react";
+
 import { CTAButton } from "../../components";
 import {
   StyledCTAWrapper,
@@ -14,6 +15,7 @@ import MetaMaskImg from "../../assets/logo-metamask.svg";
 import WalletConnectImg from "../../assets/logo-wallet-connect.svg";
 import CoinbaseImg from "../../assets/logo-coinbase.svg";
 import UserIconImg from "../../assets/icon-user.svg";
+
 function CTAContainer() {
   return (
     <StyledCTAWrapper>

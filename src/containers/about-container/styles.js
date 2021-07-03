@@ -21,11 +21,9 @@ export const StyledAboutWrapper = styled.div`
   position: sticky;
   top: 0;
 `;
-
 export const StyledHeader = styled.h3`
   margin-bottom: 0;
 `;
-
 export const StyledLink = styled.a`
   text-decoration: none;
   display: inline-block;

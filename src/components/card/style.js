@@ -46,17 +46,14 @@ export const StyledHeader = styled.header`
   width: 100%;
   justify-content: space-between;
 `;
-
 export const StyledUserLabel = styled.header`
   display: flex;
 `;
-
 export const StyledUserName = styled.h4`
   margin: 0;
   font-weight: 600;
   margin-right: 6px;
 `;
-
 export const StyledSpan = styled.span`
   display: inline-block;
   margin-right: 12px;

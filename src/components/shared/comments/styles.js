@@ -6,7 +6,6 @@ export const StyledIcon = styled.img`
   margin-right: 6px;
   color: ${({ theme }) => theme.colors.secondaryText};
 `;
-
 export const StyledCountLabel = styled.span`
   font-size: 14px;
   line-height: 16.42px;

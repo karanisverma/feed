@@ -1,5 +1,7 @@
 import React from "react";
+
 import { StyledCoin, StyledDPV, StyledCoinWrapper } from "./styles";
+
 function CoinLabel(props) {
   const { coinName, color, dailyPriceVariation } = props;
   return (

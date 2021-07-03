@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const StyledCoinWrapper = styled.span`
   display: inline-block;
 `;
@@ -9,15 +10,13 @@ export const StyledCoin = styled.span`
   display: flex;
   align-items: center;
 `;
-
 export const StyledDPV = styled.span`
   background: ${({ color }) => color};
   color: white;
   font-weight: 600;
-  display: inline-block;
   font-size: 11px;
   line-height: 13px;
   letter-spacing: -0.3px;
-  padding: 0 2px 0px 2px;
+  padding: 0 2px;
   margin-left: 6px;
 `;

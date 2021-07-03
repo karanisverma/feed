@@ -6,7 +6,6 @@ export const StyledContainer = styled.div`
   background: ${({ theme }) => theme.colors.background};
   justify-content: center;
 `;
-
 export const StyledAsideAboutContainer = styled.aside`
   display: none;
   @media (min-width: 1450px) {

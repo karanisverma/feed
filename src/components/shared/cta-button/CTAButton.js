@@ -1,4 +1,5 @@
 import React from "react";
+
 import { StyledButton } from "./style";
 
 function CTAButton({ label, icon, color = "black" }) {

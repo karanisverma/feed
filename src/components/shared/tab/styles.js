@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SearchIcon from "../../../assets/icon-search.svg";
+
 export const StyledTab = styled.div`
   font-family: Work Sans;
   font-style: normal;
@@ -7,12 +8,8 @@ export const StyledTab = styled.div`
   font-size: 14px;
   text-transform: uppercase;
   line-height: 16px;
-
-  /* g */
-
-  color: #687684;
+  color: ${({ theme }) => theme.colors.secondaryText};
 `;
-
 export const StyledTabs = styled.div`
   background: white;
   margin-top: 20px;
@@ -49,9 +46,8 @@ export const StyledTabBar = styled.div`
   position: sticky;
   z-index: 3;
 `;
-
+// StyledTabContent can be used to add default styling in tab panel.
 export const StyledTabContent = styled.div``;
-
 export const StyledSearchWrapper = styled.div`
   position: absolute;
   box-sizing: border-box;
@@ -78,7 +74,7 @@ export const StyledSearchWrapper = styled.div`
     font-size: 24px;
     font-weight: 400;
     z-index: 3;
-    color: #687684;
+    color: ${({ theme }) => theme.colors.secondaryIcon};
     padding: 12px;
     opacity: 0;
     transition: opacity 500ms;

@@ -18,8 +18,16 @@ import {
 import checkIconImg from "../../assets/checkmark.svg";
 import { getTimePassed } from "../../utils/time";
 import { formatWalletAddress } from "../../utils/format";
-const Card = ({ avatarImg, user, stats, children }) => {
-  const { walletAddress, name, isVerified, isVerifiedWallet, userName } = user;
+
+const Card = ({ user, stats, children }) => {
+  const {
+    walletAddress,
+    name,
+    isVerified,
+    isVerifiedWallet,
+    userName,
+    avatarImg,
+  } = user;
   const { like, comment, timestamp } = stats;
 
   return (
