@@ -5,7 +5,6 @@ export const StyledStats = styled.img`
   height: 10px;
   margin-right: 6px;
 `;
-
 export const StyledCountLabel = styled.span`
   font-size: 14px;
   line-height: 16.42px;

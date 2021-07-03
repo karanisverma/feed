@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   StyledTab,
   StyledTabs,
@@ -9,6 +10,7 @@ import {
   StyledSearch,
   StyledSearchWrapper,
 } from "./styles";
+
 function Tab({ children, ...props }) {
   const onClick = (e) => {
     const { disabled, onSelect, onClick } = props;

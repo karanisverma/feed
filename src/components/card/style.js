@@ -5,6 +5,25 @@ export const StyledStats = styled.div`
   width: 120px;
   justify-content: space-between;
 `;
+export const StyledAvatar = styled.img`
+  height: fit-content;
+`;
+export const StyledMenuIcon = styled.div`
+  color: #c4ccd3;
+  font-size: 28px;
+  position: relative;
+  top: -5px;
+`;
+export const StyledStatus = styled.div`
+  width: 573px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+`;
+
 export const StyledArticle = styled.article`
   display: flex;
   width: 100%;
@@ -33,16 +52,23 @@ export const StyledUserLabel = styled.header`
 export const StyledUserName = styled.h4`
   margin: 0;
   font-weight: 600;
+  margin-right: 6px;
 `;
 export const StyledSpan = styled.span`
   display: inline-block;
-  margin-left: 12px;
+  margin-right: 12px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.colors.secondaryText};
+`;
+export const StyledWalletAddress = styled.span`
+  display: inline-block;
+  margin-right: 6px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.secondaryText};
 `;
 export const StyledCheckIcon = styled.img`
   width: 10px;
-  margin-left: 6px;
+  margin-right: 12px;
   filter: none;
   ${({ isGrayScale }) => isGrayScale && `filter: grayscale(1)`}
 `;

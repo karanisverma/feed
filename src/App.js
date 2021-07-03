@@ -1,21 +1,25 @@
 import React from "react";
-import "./App.css";
 
+import "./App.css";
 import { FeedContainer, AboutContainer, CTAContainer } from "./containers";
-import { StyledContainer } from "./styles";
+import {
+  StyledContainer,
+  StyledAsideAboutContainer,
+  StyledAsideCTAContainer,
+} from "./styles";
 
 function App() {
   return (
     <StyledContainer className="App">
-      <aside>
+      <StyledAsideAboutContainer>
         <AboutContainer></AboutContainer>
-      </aside>
+      </StyledAsideAboutContainer>
       <main>
         <FeedContainer></FeedContainer>
       </main>
-      <aside>
+      <StyledAsideCTAContainer>
         <CTAContainer></CTAContainer>
-      </aside>
+      </StyledAsideCTAContainer>
     </StyledContainer>
   );
 }

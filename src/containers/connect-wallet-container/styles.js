@@ -21,14 +21,14 @@ export const StyledUserIconImg = styled.img`
 `;
 export const StyledListItem = styled.li`
   list-style: none;
-  color: #687684;
+  color: ${({ theme }) => theme.colors.secondaryText};
   font-size: 12px;
   display: flex;
 `;
 export const StyledListBullet = styled.span`
   margin-right: 12px;
   font-size: 16px;
-  color: #687684;
+  color: ${({ theme }) => theme.colors.secondaryText};
   opacity: 0.5;
   font-weight: 600;
 `;
@@ -40,7 +40,6 @@ export const StyledCTAWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
 export const StyledHeader = styled.h2`
   font-family: Work Sans;
   width: 147px;
@@ -53,7 +52,6 @@ export const StyledHeader = styled.h2`
   margin-bottom: 0;
   margin-top: 28px;
 `;
-
 export const StyledLink = styled.a`
   text-decoration: none;
   display: inline-block;
