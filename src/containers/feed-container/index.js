@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Card } from "../../components";
 import { Tab, Tabs } from "../../components/shared";
 import { StyledContainer } from "./style";
@@ -6,8 +7,8 @@ import homeIconImg from "../../assets/icon-home.svg";
 import messageIconImg from "../../assets/icon-message.svg";
 import communitiesIconImg from "../../assets/icon-communities.svg";
 import userImage from "./user.png";
-function FeedContainer(props) {
-  console.log(props);
+
+function FeedContainer() {
   const [activeKey, setActiveKey] = React.useState("0");
 
   return (

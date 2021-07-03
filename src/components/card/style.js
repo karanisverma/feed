@@ -5,7 +5,6 @@ export const StyledStats = styled.div`
   width: 120px;
   justify-content: space-between;
 `;
-
 export const StyledArticle = styled.article`
   display: flex;
   width: 100%;
@@ -28,16 +27,13 @@ export const StyledHeader = styled.header`
   width: 100%;
   justify-content: space-between;
 `;
-
 export const StyledUserLabel = styled.header`
   display: flex;
 `;
-
 export const StyledUserName = styled.h4`
   margin: 0;
   font-weight: 600;
 `;
-
 export const StyledSpan = styled.span`
   display: inline-block;
   margin-left: 12px;
